@@ -9,11 +9,12 @@ var enemyHealth = 50;
 var enemyAttack = 12;
 
 var fight = function(enemyName) {
-    window.alert("Welcome to Robot Gladiators!")
     console.log(playerName,playerAttack,playerHealth);
-    console.log(enemyNames.length);
-    var promptFight = window.prompt("Would you like to FIGHT or SKIP this battle? Enter 'FIGHT' or 'SKIP' to choose.");
-    console.log(promptFight);  
+    while(enemyHealth > 0) {
+        // window.alert("Welcome to Robot Gladiators!")
+        var promptFight = window.prompt("Would you like to FIGHT or SKIP this battle? Enter 'FIGHT' or 'SKIP' to choose.");
+
+        console.log(promptFight);  
              // if player chooses to fight
              if (promptFight === "fight" || promptFight === 'FIGHT') {
                 //enemy health
@@ -47,11 +48,17 @@ var fight = function(enemyName) {
                } else {
                    window.alert("You need to choose a valid option. Try again!");
                }
+    }
+   
 }
 for(var i = 0; i < enemyNames.length; i++) {
-    fight(enemyNames[i]);
+  var pickedEnemyName = enemyNames[i];
+  enemyHealth = 50;
+    // fight function with enemy-robot
+    fight(pickedEnemyName);
 }
-    // fight ()
+// if (enemyHealth > 0);
+    fight () 
 
     //Game States:
     // "WIN" - Player robot has defeated all enemy-robots
