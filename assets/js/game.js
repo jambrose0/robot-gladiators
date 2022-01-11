@@ -53,7 +53,28 @@ var fight = function(enemyName) {
                 
             }
             }; 
-            // if (promptFight === "fight" || promptFight === 'FIGHT') {
+           
+      
+                for(var i = 0; i < enemyNames.length; i++) {
+                    if (playerHealth > 0) {
+                        window.alert("Welcome to the Robot Gladiators! Round " + ( i + 1 ));
+                        var pickedEnemyName = enemyNames[i];
+                        enemyHealth = 50;
+                        debugger;
+                        fight(pickedEnemyName);
+                    }
+                    }
+                    
+    //Game States:
+    // "WIN" - Player robot has defeated all enemy-robots
+    //      * Fight all enemy-robots
+    //      * Defeat each enemy-robot
+    // "LOSE" - Player robot's health is zero or less
+
+
+
+    //CODE BELOW TO DELETE??
+     // if (promptFight === "fight" || promptFight === 'FIGHT') {
             // }           
             // else {
             //     fight ();
@@ -62,18 +83,3 @@ var fight = function(enemyName) {
             //    } else {
             //        window.alert("You need to choose a valid option. Try again!");
             //    }
-      
-                for(var i = 0; i < enemyNames.length; i++) {
-                    var pickedEnemyName = enemyNames[i];
-                enemyHealth = 50;
-                 // fight function with enemy-robot
-                  fight(pickedEnemyName);
-                        }
-// if (enemyHealth > 0);
-    // fight () 
-
-    //Game States:
-    // "WIN" - Player robot has defeated all enemy-robots
-    //      * Fight all enemy-robots
-    //      * Defeat each enemy-robot
-    // "LOSE" - Player robot's health is zero or less
