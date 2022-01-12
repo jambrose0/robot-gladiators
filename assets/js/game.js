@@ -71,7 +71,12 @@ var startGame = function() {
         enemyHealth = 50;
         // debugger;
         fight(pickedEnemyName);
-     }
+    //might have to move below out of function to standalone
+    if (playerHealth > 0 && i < enemyNames.length - 1) {
+        shop();
+}
+        
+    }
     else {
       window.alert("You have lost your robot in battle! Game Over!");
       break;
@@ -98,21 +103,8 @@ var endGame = function() {
     // window.alert("The game has now ended. Let's see how you did!");
 
 }
+var shop = function() {
+console.log('entered the shop');
+};
 
 startGame();
-// function endGame(stats, redo) {
-//   window.alert(playerName, playerHealth, playerAttack, playerMoney);
-//   var playAgain = window.prompt("Would you like to play again?");
-//   if (playAgain === "no" || playAgain === 'NO' || playAgain === 'No')  {
-//     //confirm yes
-//     if (playAgain === "yes" || playAgain === 'YES')  {
-//         startGame}
-//    //confirm no
-//     var confirmNo = window.confirm("Are you sure you'd like to end the game?");
-//     //if yes, leave fight
-//     if (confirmNo) {
-//         window.alert(playerName + " has decided to end the game. Goodbye!");
-//         break;
-//     }
-// }
-// }
